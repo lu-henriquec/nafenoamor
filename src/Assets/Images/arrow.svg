@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.001 0 92.715 60" width="92.715" height="60">
+  <g id="Elipse_2" data-name="Elipse 2" transform="matrix(1, 0, 0, 1, 32.714001, 0)" fill="none" stroke="#000" stroke-width="1">
+    <circle cx="30" cy="30" r="30" stroke="none"></circle>
+    <circle cx="30" cy="30" r="29.5" fill="none"></circle>
+  </g>
+  <path id="Caminho_3" data-name="Caminho 3" d="M 67.713 33.285 L 73.713 33.285 L 73.713 27.285" fill="none" stroke="#000" stroke-width="1" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -0.703371, 58.87191)"></path>
+  <path id="Caminho_4" data-name="Caminho 4" d="M 37.571 67.857 L 37.571 -7.286" fill="none" stroke="#000" stroke-width="1" transform="matrix(0, -1, 1, 0, 7.285497, 67.856499)"></path>
+</svg>
