@@ -25,3 +25,15 @@ export function TriangleBlue(props) {
     </svg>
   );
 }
+
+export function TriangleWhite(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="39.367" height="32.95" viewBox="0 0 39.367 32.95" {...props}>
+      <path id="Caminho_1" data-name="Caminho 1" d="M199.981,425.56l-17.921,30H217.9Z" transform="translate(-180.297 -423.61)" fill="none" stroke="#FFFFFF" strokeMiterlimit="10" strokeWidth="2"/>
+      <clipPath id="triangle">
+        <path id="Caminho_1" data-name="Caminho 1" d="M199.981,425.56l-17.921,30H217.9Z" transform="translate(-180.297 -423.61)" fill="none" stroke="#FFFFFF" strokeMiterlimit="10" strokeWidth="2"/>
+      </clipPath>
+      <g clipPath="url(#triangle)"><rect height="100%" width="100%" fill="#FFFFFF"></rect></g>
+    </svg>
+  );
+}

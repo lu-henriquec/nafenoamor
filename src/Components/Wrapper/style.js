@@ -14,4 +14,8 @@ export const WrapperDiv = styled.div`
     background: linear-gradient(to right, transparent 0%, transparent 50%, #FFEDED 50%, #FFEDED 100%); /* W3C */
 	`}
 
+  ${({ bgGradientTop }) => bgGradientTop && css`
+    background: ${`linear-gradient(to bottom, ${bgGradientTop} 0%, ${bgGradientTop} 50%, transparent 50%, transparent 100%)`}; 
+	`}
+
 `;

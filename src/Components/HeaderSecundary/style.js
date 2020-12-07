@@ -8,5 +8,14 @@ export const Content = styled.div`
 
 export const Middle = styled.div`
   justify-self: center;
-  width: 100%;
+`;
+
+export const First = styled.div`
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  span {
+    text-decoration: underline;
+  }
 `;
