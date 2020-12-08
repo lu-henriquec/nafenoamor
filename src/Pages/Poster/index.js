@@ -6,6 +6,7 @@ import HeaderSecundary from '../../Components/HeaderSecundary';
 import Footer from '../../Components/Footer';
 import Social from '../../Components/Social';
 import Card from '../../Components/Card';
+import Downloads from '../../Components/Downloads';
 
 import { TriangleYellow, TriangleBlue } from '../../Assets/SVGComponents/triangle';
 import { CircleLightPink, CirclePink } from '../../Assets/SVGComponents/circle';
@@ -42,12 +43,11 @@ function Poster() {
       </HeaderSecundary>
       
       <Main>
-        {/* <Intro type={formData.type} /> */}
         <Card data={formData} />       
       </Main>
 
       <Footer>
-        
+        <Downloads />
       </Footer>
     </Wrapper>
   );

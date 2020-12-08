@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
@@ -8,7 +8,14 @@ import { CircleWhite } from '../../Assets/SVGComponents/circle';
 import { Main } from './style';
 
 function Loading() {
+  let history = useHistory();
   const { type } = useSelector(state => state.formDataReducer.formData);
+
+  useEffect(() => {
+    setTimeout(() => {
+      history.push('/poster');
+    }, 2000);
+  }, [])
   
   return (
     <Main bgColor={type === 'love' ? '#FF9090' : 'var(--color-tertiary)'}>
