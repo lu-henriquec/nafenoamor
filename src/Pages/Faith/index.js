@@ -56,7 +56,7 @@ function Faith() {
         <Animation trigger={finishAnimation}/>
       </Main>
 
-      <Footer>
+      <Footer className="hideLink">
         <NextLink link="/write" visible={buttonvisible} />
       </Footer>
     </Wrapper>

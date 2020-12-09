@@ -20,6 +20,7 @@ export const ItemColor = styled.div`
 
   &:before {
     content: 'OK';
+    font-weight: 900;
     position: absolute;
     top: 50%;
     left: 50%;

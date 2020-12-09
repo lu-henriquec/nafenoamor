@@ -64,7 +64,7 @@ function Write() {
         />
       </Main>
 
-      <Footer>
+      <Footer className="hideLink">
         <NextButton 
           onClick={valid}
           visible={true}

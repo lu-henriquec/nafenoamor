@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const Option = styled.span`
   position: relative;
   font-size: 1.4rem;
+  font-weight: 300;
   opacity: ${props => props.active ? '100%' : '20%'};
   cursor: pointer;
 

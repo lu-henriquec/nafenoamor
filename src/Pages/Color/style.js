@@ -16,6 +16,7 @@ export const Main = styled.main`
 
 export const Legend = styled.p`
   font-size: 2rem;
+  font-weight: 300;
   max-width: 340px;
   text-align: center;
 `;

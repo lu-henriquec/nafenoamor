@@ -181,7 +181,7 @@ function Write() {
         <Error>{error}</Error>
       </Main>
 
-      <Footer>
+      <Footer className="hideLink">
         <NextButton 
           onClick={validForm}
           visible={true}

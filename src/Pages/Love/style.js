@@ -47,6 +47,7 @@ export const AreaAnim = styled.div`
 
 export const TextDisappear = styled.p`
   font-size: 4rem;
+  font-family: 'Cera PRO';
   text-transform: uppercase;
 
   animation-duration: 2s;
@@ -61,9 +62,9 @@ export const TextDisappear = styled.p`
 
 export const TextAppearTop = styled.p`
   font-size: 2rem;
+  font-weight: 300;
   opacity: 0;
   transform: translateY(-70px);
-  max-width: 50vw;
   text-align: center;
 
   animation-duration: 1s;
@@ -74,13 +75,17 @@ export const TextAppearTop = styled.p`
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-name: fadeIn;
+
+  @media (min-width: 700px) {
+    max-width: 50vw;
+  }
 `;
 
 export const TextAppearBottom = styled.p`
   font-size: 2rem;
+  font-weight: 300;
   opacity: 0;
   transform: translateY(70px);
-  max-width: 50vw;
   text-align: center;
 
   animation-duration: 1s;
@@ -91,4 +96,8 @@ export const TextAppearBottom = styled.p`
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-name: fadeIn;
+
+  @media (min-width: 700px) {
+    max-width: 50vw;
+  }
 `;

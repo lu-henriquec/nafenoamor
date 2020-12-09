@@ -15,6 +15,21 @@ export const Content = styled.footer`
     text-decoration: underline;
     justify-self: end;
   }
+
+  @media (max-width: 700px) {
+    grid-template-columns: auto 1fr;
+    &.hideLink {
+      p {
+        display: none
+      }
+    }
+
+    &.hideGallery {
+      grid-template-columns: 1fr;
+
+      & > a { display: none; }
+    }
+  }
 `;
 
 export const Middle = styled.div`

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Content, Middle } from './style';
+import { Content, Middle, Top } from './style';
 
 import Social from '../Social';
 
@@ -8,7 +8,9 @@ function Header({ children }) {
   return (
     <header>
       <Content>
-        <Social />
+        <Top>
+          <Social />
+        </Top>
         <Middle>
           {children}
         </Middle>

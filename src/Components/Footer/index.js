@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { Content, Middle } from './style';
 
-function Footer({ children }) {
+function Footer({ children, ...props }) {
   return (
-    <Content>
+    <Content {...props}>
       <p>ir para <a href="https://audaz.com.br/" target="_blank" rel="noopener noreferrer">Audaz</a></p>
       <Middle>
         {children}

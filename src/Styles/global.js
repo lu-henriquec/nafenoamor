@@ -1,5 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { ForoLightWOFF, ForoLightWOFF2 } from '../Assets/fonts/foro-light'
+import { ForoRegularWOFF, ForoRegularWOFF2 } from '../Assets/fonts/foro-regular'
+import { ForoMediumWOFF, ForoMediumWOFF2 } from '../Assets/fonts/foro-medium'
+import { ForoBoldWOFF, ForoBoldWOFF2 } from '../Assets/fonts/foro-bold'
+import { CeraProBlackWOFF, CeraProBlackWOFF2 } from '../Assets/fonts/cerapro-black'
+
 export default createGlobalStyle`
   :root {
     --color-primary: #FFA3A3;
@@ -40,6 +46,56 @@ export default createGlobalStyle`
     font-size: 60%;
   }
 
+  @font-face {
+    font-family: 'Foro';
+    src: local('Foro-Light'),
+        url(${ForoLightWOFF2}) format('woff2'),
+        url(${ForoLightWOFF}) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Foro';
+    src: local('Foro-Bold'),
+        url(${ForoBoldWOFF2}) format('woff2'),
+        url(${ForoBoldWOFF}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Foro';
+    src: local('Foro-Medium'),
+        url(${ForoMediumWOFF2}) format('woff2'),
+        url(${ForoMediumWOFF}) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Foro';
+    src: local('Foro-Regular'),
+        url(${ForoRegularWOFF2}) format('woff2'),
+        url(${ForoRegularWOFF}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Cera PRO';
+    src: local('Cera PRO Black'), local('CeraPRO-Black'),
+      url(${CeraProBlackWOFF2}) format('woff2'),
+      url(${CeraProBlackWOFF}) format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -52,7 +108,7 @@ export default createGlobalStyle`
 
   body {
     background-color: #FFFFFF;
-    font: 16px/1.5 "Courier New", Arial, sans-serif;
+    font: 16px/1.5 "Foro", Arial, sans-serif;
   }
 
   body,
@@ -60,6 +116,7 @@ export default createGlobalStyle`
   button,
   textarea {
     color: var(--color-text-base);
+    font-family: "Foro";
   }
 
   @media (min-width: 700px) {

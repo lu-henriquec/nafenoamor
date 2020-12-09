@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Content = styled.div`
   display: flex;
   align-items: center;
+  font-weight: normal;
 
   p {
     font-size: 1.4rem;

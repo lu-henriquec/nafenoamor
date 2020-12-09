@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const Middle = styled.div`
@@ -17,5 +20,9 @@ export const First = styled.div`
   }
   span {
     text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    text-align: center;
   }
 `;

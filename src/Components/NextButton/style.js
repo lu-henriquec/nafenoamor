@@ -11,6 +11,7 @@ export const Area = styled.div`
     align-items: center;
     outline: none;
     cursor: pointer;
+    font-weight: 500;
 
     img {
       margin-left: 15px;

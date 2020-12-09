@@ -13,10 +13,15 @@ export const Section = styled.div`
   align-self: center;
 
   font-size: 4rem;
+  font-family: 'Cera PRO';
   text-transform: uppercase;
   cursor: pointer;
 
   img {
     margin-top: 20px;
   }
+
+    @media (max-width: 700px) {
+      font-size: 2rem;
+    }
 `;

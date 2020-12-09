@@ -11,6 +11,7 @@ export const Main = styled.div`
 
   p {
     font-size: 2rem;
+    font-weight: 300;
     margin-bottom: 30px;
   }
 

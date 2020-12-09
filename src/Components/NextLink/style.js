@@ -7,6 +7,7 @@ export const Area = styled.div`
     text-decoration: none;
     display: flex;
     align-items: center;
+    font-weight: 500;
 
     img {
       margin-left: 15px;

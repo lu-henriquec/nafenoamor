@@ -15,6 +15,7 @@ export const InputStyled = styled.input`
   background-color: transparent;
   width: 100%;
   font-size: 2rem;
+  font-weight: 300;
   z-index: 10;
   position: relative;
 
@@ -36,11 +37,18 @@ export const InputStyled = styled.input`
     color: ${props => props.color ? props.color : '#FFFFFF'};
     opacity: 1;
     transition: all 0.3s;
+
+    @media (max-width: 700px) {
+      color: #000;
+    }
   }
 
   &:focus,
   &:not(:placeholder-shown) {
     border-bottom-color: ${props => props.color ? props.color : '#FFFFFF'};
+    @media (max-width: 700px) {
+      border-bottom-color: #000;
+    }
   }
 `;
 
@@ -51,5 +59,6 @@ export const Label = styled.label`
   z-index: 1;
   transition: all 0.3s;
   font-size: 2rem;
+  font-weight: 300;
   cursor: text;
 `;

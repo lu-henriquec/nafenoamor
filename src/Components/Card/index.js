@@ -10,7 +10,7 @@ function Card({ data }) {
       <Container id="card" bgColor={data.color}>
         <Top>Pedido em 2020 &#8594; 2021 & além</Top>
         <Middle>
-          <span>com amor</span>
+          <span>Com amor</span>
           <p>{data.comeco}</p>
           <p>{data.meio}</p>
           <p>{data.fim}</p>

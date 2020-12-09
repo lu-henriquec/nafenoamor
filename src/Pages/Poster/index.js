@@ -11,7 +11,7 @@ import Downloads from '../../Components/Downloads';
 import { TriangleYellow, TriangleBlue } from '../../Assets/SVGComponents/triangle';
 import { CircleLightPink, CirclePink } from '../../Assets/SVGComponents/circle';
 
-import { Main, AreaSVG, Text } from './style';
+import { Main, AreaSVG, Text, WrapperCard } from './style';
 
 const Intro = ({ type }) => {
   if(type === 'love') {
@@ -43,10 +43,13 @@ function Poster() {
       </HeaderSecundary>
       
       <Main>
-        <Card data={formData} />       
+        <Intro type={formData.type} />
+        <WrapperCard>
+          <Card data={formData} /> 
+        </WrapperCard>
       </Main>
 
-      <Footer>
+      <Footer className="hideLink hideGallery">
         <Downloads />
       </Footer>
     </Wrapper>

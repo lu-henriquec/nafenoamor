@@ -27,12 +27,28 @@ export const Container = styled.div`
           width: 100%;
         }
       }
+
+      p {
+        line-height: 2rem;
+        font-family: "Cera PRO";
+      }
     }
 
     .bottom {
       justify-content: space-between;
       flex-direction: row;
+
+      p {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+      }
     }
+  }
+
+  @media (max-width: 700px) {
+    max-width: 315px;
+    max-height: 400px;
   }
 `;
 
@@ -52,6 +68,7 @@ export const Middle = styled.div.attrs({
     padding-bottom: 15px;
     margin-bottom: 20px;
     display: inline-block;
+    font-size: 1.2rem;
 
     &:before {
       content: '';
@@ -66,8 +83,7 @@ export const Middle = styled.div.attrs({
 
   p {
     font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 1.8rem;
+    line-height: 3rem;
   }
 `;
 
@@ -80,5 +96,8 @@ export const Bottom = styled.div.attrs({
 
   p {
     font-size: 1rem;
+    margin: 0 auto 20px;
+    width: 120px;
+    text-align: center;
   }
 `;
