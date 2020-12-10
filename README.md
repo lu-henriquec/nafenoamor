@@ -8,7 +8,6 @@
 - React (Create React App)
 - Redux
 - Styled components
-- Gh Pages
 
 ## Como rodar ▶️
 
@@ -27,10 +26,16 @@ Abra [http://localhost:3000](http://localhost:3000) no seu browser.
 
 A página recarrega sozinha enquanto você edita os arquivos.<br />
 
-## Deploy 🚀
+### `yarn build`
 
-ainda no diretório do projeto, execute o comando:
-### `yarn deploy`
+Compila o aplicativo para produção na pasta de construção.
+
+Ele agrupa corretamente o React no modo de produção e otimiza a construção para o melhor desempenho.
+
+A compilação é reduzida e os nomes dos arquivos incluem os hashes.
+Seu aplicativo está pronto para ser implantado!
+
+Consulte a seção sobre [deploy](https://create-react-app.dev/docs/deployment/) para obter mais informações.
 
 ***
 _made with ❤️_
