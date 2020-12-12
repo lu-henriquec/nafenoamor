@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
 import { setFormData } from '../../Store/FormData/actions';
+import { LOVE_SUGGESTIONS, FAITH_SUGGESTIONS } from '../../Utils/constants';
+import getRandom from '../../Utils/random';
 
 import Wrapper from '../../Components/Wrapper';
 import Header from '../../Components/Header';
@@ -100,11 +102,14 @@ function Write() {
   const LegendTrigger = type === 'love' ? LegendTriggerLove : LegendTriggerFaith;
 
   const triggerWords = () => {
+    const words = type === 'love' ? LOVE_SUGGESTIONS : FAITH_SUGGESTIONS;
+    const randomElements = getRandom(words, 3);
+
     setData({
       ...data,
-      comeco: 'teste comeco',
-      meio: 'teste meio',
-      fim: 'teste fim'
+      comeco: randomElements[0],
+      meio: randomElements[1],
+      fim: randomElements[2]
     })
   }
 
