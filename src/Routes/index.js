@@ -13,7 +13,7 @@ const NotFound = lazy(() => import('../Pages/NotFound'));
 
 export default function Routes() {
   return (
-    <Router>
+    <Router basename="/2021">
       <Suspense fallback={<div>Carregando...</div>}>
         <Switch>
           <Route path="/" exact component={Home} />
