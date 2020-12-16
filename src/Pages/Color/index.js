@@ -41,8 +41,7 @@ function Write() {
 
   return (
     <Wrapper>
-      <Header>
-      </Header>
+      <Header />
       
       <Main>
         <Legend>

@@ -3,7 +3,11 @@ import styled from 'styled-components';
 export const ContainerOptions = styled.div`
   width: 35vw;
   min-width: 350px;
-  margin-top: 70px;
+  margin-top: 20px;
+
+  @media (min-width: 700px) {
+    margin-top: 70px;
+  }
 `;
 
 export const Main = styled.main`

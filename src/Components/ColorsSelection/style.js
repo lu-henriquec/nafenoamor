@@ -13,10 +13,15 @@ export const Container = styled.div`
 export const ItemColor = styled.div`
   background-color: ${props => props.color};
   height: 100%;
-  widows: 100%;
+  width: 100%;
   cursor: pointer;
   transition: all .3s;
   position: relative;
+
+  @media (max-width: 700px) {
+    max-height: 350px;
+    align-self: center;
+  }
 
   &:before {
     content: 'OK';

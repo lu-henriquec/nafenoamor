@@ -21,7 +21,7 @@ export default function Routes() {
         <ProtectedRoute path="/faith" exact component={Faith} />
         <ProtectedRoute path="/love" exact component={Love} />
         <ProtectedRoute path="/write" exact component={Write} />
-        <ProtectedRoute path="/color" exact component={Color} />
+        <Route path="/color" exact component={Color} />
         <ProtectedRoute path="/loading" exact component={Loading} />
         <ProtectedRoute path="/poster" exact component={Poster} />
         <Route path="/gallery" exact component={Gallery} />
