@@ -13,7 +13,9 @@ const getCards = async () => {
 
 const saveCard = async (card) => {
   try {
-		const send = await api.post('/api_add.php', card);
+		const send = await api.post('/api_add.php', {}, {
+			params: card
+		});
 
 		return send;
 	}
