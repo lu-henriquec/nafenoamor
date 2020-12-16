@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
 import { setFormData } from '../../Store/FormData/actions';
-import { LOVE_SUGGESTIONS, FAITH_SUGGESTIONS } from '../../Utils/constants';
-import getRandom from '../../Utils/random';
+import { getFrases } from '../../Services/apiService';
 
 import Wrapper from '../../Components/Wrapper';
 import Header from '../../Components/Header';
@@ -101,16 +100,18 @@ function Write() {
 
   const LegendTrigger = na_fe_no_amor === 'love' ? LegendTriggerLove : LegendTriggerFaith;
 
-  const triggerWords = () => {
-    const words = na_fe_no_amor === 'love' ? LOVE_SUGGESTIONS : FAITH_SUGGESTIONS;
-    const randomElements = getRandom(words, 3);
+  const triggerWords = async () => {
+    const frase = await getFrases();
+    // const words = na_fe_no_amor === 'love' ? LOVE_SUGGESTIONS : FAITH_SUGGESTIONS;
 
-    setData({
-      ...data,
-      palavra1: randomElements[0],
-      palavra2: randomElements[1],
-      palavra3: randomElements[2]
-    })
+    if (frase.data.length) {
+      setData({
+        ...data,
+        palavra1: frase.data[0].palavra1,
+        palavra2: frase.data[0].palavra2,
+        palavra3: frase.data[0].palavra3
+      })
+    }
   }
 
   return (

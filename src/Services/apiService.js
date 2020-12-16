@@ -11,6 +11,17 @@ const getCards = async () => {
 	}
 };
 
+const getFrases = async () => {
+  try {
+		const data = await api.get('/api_frase.php')
+
+		return data;
+	}
+	catch (err) {
+		throw new Error(err);
+	}
+};
+
 const saveCard = async (card) => {
   try {
 		const send = await api.post('/api_add.php', {}, {
@@ -24,4 +35,4 @@ const saveCard = async (card) => {
 	}
 };
 
-export { getCards, saveCard };
+export { getCards, saveCard, getFrases };
