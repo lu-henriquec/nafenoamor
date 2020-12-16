@@ -1,32 +1,33 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-const Home = lazy(() => import('../Pages/Home'));
-const Faith = lazy(() => import('../Pages/Faith'));
-const Love = lazy(() => import('../Pages/Love'));
-const Write = lazy(() => import('../Pages/Write'));
-const Color = lazy(() => import('../Pages/Color'));
-const Loading = lazy(() => import('../Pages/Loading'));
-const Poster = lazy(() => import('../Pages/Poster'));
-const Gallery = lazy(() => import('../Pages/Gallery'));
-const NotFound = lazy(() => import('../Pages/NotFound'));
+import ProtectedRoute from './protectedRoute'
+import Home from '../Pages/Home'
+import Faith from '../Pages/Faith'
+import Love from '../Pages/Love'
+import Write from '../Pages/Write'
+import Color from '../Pages/Color'
+import Loading from '../Pages/Loading'
+import Poster from '../Pages/Poster'
+import Gallery from '../Pages/Gallery'
+import Card from '../Pages/Card'
+import NotFound from '../Pages/NotFound'
 
 export default function Routes() {
   return (
     <Router basename="/2021">
-      <Suspense fallback={<div>Carregando...</div>}>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/faith" exact component={Faith} />
-          <Route path="/love" exact component={Love} />
-          <Route path="/write" exact component={Write} />
-          <Route path="/color" exact component={Color} />
-          <Route path="/loading" exact component={Loading} />
-          <Route path="/poster" exact component={Poster} />
-          <Route path="/gallery" exact component={Gallery} />
-          <Route component={NotFound} />
-        </Switch>
-      </Suspense>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <ProtectedRoute path="/faith" exact component={Faith} />
+        <ProtectedRoute path="/love" exact component={Love} />
+        <ProtectedRoute path="/write" exact component={Write} />
+        <ProtectedRoute path="/color" exact component={Color} />
+        <ProtectedRoute path="/loading" exact component={Loading} />
+        <ProtectedRoute path="/poster" exact component={Poster} />
+        <Route path="/gallery" exact component={Gallery} />
+        <Route path="/card/:id" exact component={Card} />
+        <Route component={NotFound} />
+      </Switch>
     </Router>
   );
 };

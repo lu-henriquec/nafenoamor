@@ -17,11 +17,11 @@ import WriteOptions from '../../Components/WriteOptions';
 import { Main, Legend, Form, Row, Error } from './style';
 
 const INITAL_DATA = {
-  comeco: '',
-  meio: '',
-  fim: '',
-  name: '',
-  whatDo: '',
+  palavra1: '',
+  palavra2: '',
+  palavra3: '',
+  nome: '',
+  funcao: '',
   email: ''
 };
 
@@ -29,15 +29,15 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .required('O campo "E-mail" é obrigatório')
     .email('Email inválido'),
-  whatDo: Yup.string()
+  funcao: Yup.string()
     .required('O campo "O que faz" é obrigatório'),
-  name: Yup.string()
+  nome: Yup.string()
     .required('O campo "Nome" é obrigatório'),
-  fim: Yup.string()
+  palavra3: Yup.string()
     .required('O campo "Fim" é obrigatório'),
-  meio: Yup.string()
+  palavra2: Yup.string()
     .required('O campo "Meio" é obrigatório'),
-  comeco: Yup.string()
+  palavra1: Yup.string()
     .required('O campo "Começo" é obrigatório')
 });
 
@@ -61,7 +61,7 @@ const LegendTriggerFaith = ({ trigger }) => {
 function Write() {
   let history = useHistory();
   const dispatch = useDispatch();
-  const { type } = useSelector(state => state.formDataReducer.formData);
+  const { na_fe_no_amor } = useSelector(state => state.formDataReducer.formData);
   const [inLuck, setInLuck] = useState(false);
   const [error, setError] = useState('');
   const [data, setData] = useState(INITAL_DATA);
@@ -73,9 +73,9 @@ function Write() {
   const getBgColor = () => {
     let color = '';
 
-    if (type === 'love') color = 'var(--color-secundary)';
+    if (na_fe_no_amor === 'love') color = 'var(--color-secundary)';
 
-    if (type === 'faith') color = 'var(--color-quarter)';
+    if (na_fe_no_amor === 'faith') color = 'var(--color-quarter)';
 
     return color;
   }
@@ -87,29 +87,29 @@ function Write() {
 			return;
     }
 
-    dispatch(setFormData({type, ...data}))
+    dispatch(setFormData({na_fe_no_amor, ...data}))
     history.push('/color')
   }
 
   const getLegend = () => {
     let text = 'Com respeito, sem preconceito, conte em três palavras o que você espera pra 2021.'
 
-    if (type === 'love') text = 'Com respeito, sem preconceito, conte em três palavras o que é 2021 com amor.'
+    if (na_fe_no_amor === 'love') text = 'Com respeito, sem preconceito, conte em três palavras o que é 2021 com amor.'
 
     return text
   }
 
-  const LegendTrigger = type === 'love' ? LegendTriggerLove : LegendTriggerFaith;
+  const LegendTrigger = na_fe_no_amor === 'love' ? LegendTriggerLove : LegendTriggerFaith;
 
   const triggerWords = () => {
-    const words = type === 'love' ? LOVE_SUGGESTIONS : FAITH_SUGGESTIONS;
+    const words = na_fe_no_amor === 'love' ? LOVE_SUGGESTIONS : FAITH_SUGGESTIONS;
     const randomElements = getRandom(words, 3);
 
     setData({
       ...data,
-      comeco: randomElements[0],
-      meio: randomElements[1],
-      fim: randomElements[2]
+      palavra1: randomElements[0],
+      palavra2: randomElements[1],
+      palavra3: randomElements[2]
     })
   }
 
@@ -136,23 +136,23 @@ function Write() {
           <Row>
             <Input
               label="Começo"
-              name="comeco"
+              name="palavra1"
               type="text"
-              value={data.comeco}
+              value={data.palavra1}
               onChange={(e) => handleValues(e.target)}
             />
             <Input
               label="Meio"
-              name="meio"
+              name="palavra2"
               type="text"
-              value={data.meio}
+              value={data.palavra2}
               onChange={(e) => handleValues(e.target)}
             />
             <Input
               label="Fim"
-              name="fim"
+              name="palavra3"
               type="text"
-              value={data.fim}
+              value={data.palavra3}
               onChange={(e) => handleValues(e.target)}
               />
           </Row>
@@ -160,17 +160,17 @@ function Write() {
             <Input
               label="Seu nome"
               color={getBgColor()}
-              name="name"
+              name="nome"
               type="text"
-              value={data.name}
+              value={data.nome}
               onChange={(e) => handleValues(e.target)}
             />
             <Input
               label="O que faz" 
               color={getBgColor()} 
-              name="whatDo" 
+              name="funcao" 
               type="text" 
-              value={data.whatDo}
+              value={data.funcao}
               onChange={(e) => handleValues(e.target)}
             />
             <Input 

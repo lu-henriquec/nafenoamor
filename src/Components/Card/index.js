@@ -1,22 +1,29 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import Formas from '../../Assets/Images/formas.svg';
 
 import { Container, Top, Middle, Bottom } from './style';
 
 function Card({ data }) {
-  if(data.type === 'love') {
+  let history = useHistory();
+
+  const goToCard = () => {
+    history.push(`/card/${data.id}`);
+  }
+
+  if(data.na_fe_no_amor === 'love') {
     return (
-      <Container id="card" bgColor={data.color}>
+      <Container id="card" onClick={goToCard} bgColor={data.cor}>
         <Top>Pedido em 2020 &#8594; 2021 & além</Top>
         <Middle>
           <span>Com amor</span>
-          <p>{data.comeco}</p>
-          <p>{data.meio}</p>
-          <p>{data.fim}</p>
+          <p>{data.palavra1}</p>
+          <p>{data.palavra2}</p>
+          <p>{data.palavra3}</p>
         </Middle>
         <Bottom>
-          <p>{data.name}</p>
+          <p>{data.nome}</p>
           <img src={Formas} alt='Formas geométricas' />
         </Bottom>
       </Container>
@@ -24,13 +31,13 @@ function Card({ data }) {
   }
 
   return (
-    <Container id="card" className="faith--card" bgColor={data.color}>
+    <Container id="card" onClick={goToCard} className="faith--card" bgColor={data.cor}>
       <Top>Pedido em vinte-vinte</Top>
       <Middle>
         <span>com fé</span>
-        <p>{data.comeco}</p>
-        <p>{data.meio}</p>
-        <p>{data.fim}</p>
+        <p>{data.palavra1}</p>
+        <p>{data.palavra2}</p>
+        <p>{data.palavra3}</p>
       </Middle>
       <Bottom>
         <img src={Formas} alt='Formas geométricas' />

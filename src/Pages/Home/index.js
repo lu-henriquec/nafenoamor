@@ -19,7 +19,7 @@ function Home() {
   const dispatch = useDispatch();
 
   const setType = async type => {
-    await dispatch(setFormData({ type }));
+    await dispatch(setFormData({ na_fe_no_amor: type }));
     history.push(`/${type}`);
   };
 

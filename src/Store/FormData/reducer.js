@@ -5,7 +5,6 @@ const INITIAL_STATE = {
 };
 
 export default function formDataReducer(state = INITIAL_STATE, { type, payload }) {
-	console.log(state, type, payload);
 	switch (type) {
 	case TYPES_ACTION.SET_FORMDATA:
 		return {

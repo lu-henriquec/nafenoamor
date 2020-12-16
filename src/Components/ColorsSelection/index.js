@@ -22,7 +22,7 @@ function ColorsSelection({ smoothMode, type, currentColor, onSelectCallback}) {
         <ItemColor
           key={item}
           active={item === currentColor}
-          color={item}
+          color={`var(${item})`}
           onClick={() => onSelectCallback(item)}
         />
       ))}

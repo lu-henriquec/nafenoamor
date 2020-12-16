@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 100%;
   max-height: 600px;
   height: 100%;
-  background-color: ${props => props.bgColor ? props.bgColor : 'var(--color-primary)'};
+  background-color: ${props => props.bgColor ? `var(${props.bgColor})` : 'var(--color-primary)'};
   padding: 20px;
 
   &.faith--card {

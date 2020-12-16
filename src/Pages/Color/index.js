@@ -23,7 +23,7 @@ function Write() {
   const valid = async () => {
     if(!selectedColor) return;
 
-    await dispatch(setFormData({ ...formData, color: selectedColor}))
+    await dispatch(setFormData({ ...formData, cor: selectedColor}))
     history.push('/Loading')
   }
 
@@ -34,7 +34,7 @@ function Write() {
   const getLegend = () => {
     let text = 'Escolha a forma que você quer colorir a sua fé'
 
-    if (formData.type === 'love') text = 'Escolha a forma que você quer colorir sua mensagem de amor'
+    if (formData.na_fe_no_amor === 'love') text = 'Escolha a forma que você quer colorir sua mensagem de amor'
 
     return text
   }
@@ -58,7 +58,7 @@ function Write() {
         </ContainerOptions>
         <ColorsSelection
           smoothMode={visibleSmooth}
-          type={formData.type}
+          type={formData.na_fe_no_amor}
           currentColor={selectedColor}
           onSelectCallback={selectColor}
         />

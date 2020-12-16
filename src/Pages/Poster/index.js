@@ -34,6 +34,7 @@ const Intro = ({ type }) => {
 }
 
 function Poster() {
+  console.log('Poster')
   const { formData } = useSelector(state => state.formDataReducer);
 
   return (
@@ -43,7 +44,7 @@ function Poster() {
       </HeaderSecundary>
       
       <Main>
-        <Intro type={formData.type} />
+        <Intro type={formData.na_fe_no_amor} />
         <WrapperCard>
           <Card data={formData} /> 
         </WrapperCard>

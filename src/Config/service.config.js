@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const api = Axios.create({
-	baseURL: 'https://api.chucknorris.io/jokes',
+	baseURL: 'https://audaz.com.br/api_app',
 });
 
 export { api };
